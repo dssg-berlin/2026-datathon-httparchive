@@ -57,12 +57,15 @@ This is the start of a multi-phase collaboration between DSSG Berlin and HTTP Ar
 
 ## Repository Structure (to be expanded during the event)
 
+```
+.
 ├── README.md
 ├── notebooks/          # Exploratory analysis
 ├── queries/            # Reusable BigQuery SQL
 ├── prototypes/         # Dashboards, tools, open-data products
 ├── docs/               # Findings, methodology notes
 └── presentations/      # Pitch slides & final outputs
+```
 
 ---
 
