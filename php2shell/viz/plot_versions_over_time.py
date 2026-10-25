@@ -3,6 +3,7 @@
 
 import matplotlib.pyplot as plt
 import numpy as np
+from pathlib import Path
 
 # Illustrative series based on HTTP Archive trend queries (2023–2026)
 # Replace with exact CSV export from 04_major_versions_over_time.sql for production.
@@ -44,5 +45,12 @@ ax.annotate('Pre-patch crawl: all disclosed versions vulnerable\n'
             bbox=dict(boxstyle='round', facecolor='#fff3cd', edgecolor='#ffc107'))
 
 plt.tight_layout()
-plt.savefig('php_versions_over_time.png', dpi=150, bbox_inches='tight', facecolor='white')
-print('Saved php_versions_over_time.png')
+output = (
+    Path(__file__).resolve().parents[1]
+    / 'figures'
+    / '2026'
+    / 'php_versions_over_time.png'
+)
+output.parent.mkdir(parents=True, exist_ok=True)
+plt.savefig(output, dpi=150, bbox_inches='tight', facecolor='white')
+print(f'Saved {output}')

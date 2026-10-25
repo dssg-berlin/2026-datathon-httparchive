@@ -3,6 +3,7 @@
 
 import matplotlib.pyplot as plt
 import numpy as np
+from pathlib import Path
 
 # Approximate averages from 2025-09-01 crawl (desktop + mobile midpoints)
 buckets = ['Top 1k', 'Top 10k', 'Top 100k', 'Top 1M', 'Long Tail']
@@ -55,5 +56,12 @@ fig.text(0.5, -0.02,
          ha='center', fontsize=8, style='italic', color='#555')
 
 plt.tight_layout()
-plt.savefig('php_longtail_vulnerability.png', dpi=150, bbox_inches='tight', facecolor='white')
-print('Saved php_longtail_vulnerability.png')
+output = (
+    Path(__file__).resolve().parents[1]
+    / 'figures'
+    / '2025'
+    / 'php_longtail_vulnerability.png'
+)
+output.parent.mkdir(parents=True, exist_ok=True)
+plt.savefig(output, dpi=150, bbox_inches='tight', facecolor='white')
+print(f'Saved {output}')
