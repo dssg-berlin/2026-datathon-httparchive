@@ -1,0 +1,3 @@
+[submodule "nonprofit-web-accessibility"]
+	path = nonprofit-web-accessibility
+	url = https://github.com/sashabelskaya/nonprofit-web-accessibility
