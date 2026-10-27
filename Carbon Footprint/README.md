@@ -40,7 +40,7 @@ Data was queried directly from Google BigQuery via the public HTTP Archive datas
 Emissions per page view are calculated using the standard SWD factor:
 $$\text{Emissions (gCO}_2\text{e)} = \text{Bytes Transferred} \times 0.00000008644 \text{ gCO}_2\text{e/byte}$$
 
-$$\text{Total MB} = \frac{\text{bytes\_total}}{1024 \times 1024}$$
+$$\text{Total MB} = \frac{\text{Bytes Total}}{1024 \times 1024}$$
 
 ---
 
